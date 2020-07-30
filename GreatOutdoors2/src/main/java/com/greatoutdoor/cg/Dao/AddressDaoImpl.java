@@ -1,4 +1,4 @@
-package com.cg.Dao;
+package com.greatoutdoor.cg.Dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.cg.entity.Address;
+import com.greatoutdoor.cg.entity.Address;
 
 @Transactional
 @Repository
@@ -24,10 +24,11 @@ public class AddressDaoImpl implements AddressDaoI {
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Address> retreive() {
 		
-			Query q=em.createQuery("from Address ");
+			Query q=em.createQuery("from Address");
 			// TODO Auto-generated method stub
 			return q.getResultList();
 	}
